@@ -1,0 +1,31 @@
+.first {
+  width: 100px;
+  height: 100px;
+  border: 15px solid black;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-color: transparent;
+  animation: spin 1s linear reverse infinite;
+}
+.first::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid black;
+  border-top-color: transparent;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
